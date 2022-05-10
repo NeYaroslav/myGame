@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: calc(100vmin - 30px);
+    height: calc(100vmin - 30px);
+    margin: 15px;
+    // margin: 0 auto;
+    display: grid;
+    grid-gap: 2vmin;
+    padding: 2vmin;
+    grid-template-areas: "a b c d"
+                         "e f g h"
+                         "j k l m"
+                         "n o p q";
+    background: linear-gradient(.375turn, #e7be6c 50%, #d4af65 50%);
+    border-radius: 4vmin;
+    box-shadow: 1.5vmin 1.5vmin 0 0 #000;
+    position: relative;
+}
+
+.element {
+    // background: #000;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 4vmin;
+    & >div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 4vmin;
+    }
+}
+.element.hiden {
+    transition: .2s;
+    transform: scale(0);
+    opacity: 0;
+}
+.element__front {
+    padding: 1.5vmin;
+    background: #fff701;
+    transform: scale(0, 1);
+    z-index: 2;
+    transition: all .2s ease-in-out;
+}
+
+.element__back {
+    background: #e76c6c;
+    z-index: 1;
+    transition: transform .2s ease-in-out .2s;
+    border: .5vmin outset #fff;
+    // box-shadow: 5px 5px 0 0 #;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15vmin;
+    cursor: pointer;
+}
+.element.act .element__front {
+    transform: scale(1, 1);
+    transition: all .2s ease-in-out .2s;
+}
+.element.act .element__back {
+    transform: scale(0, 1);
+    transition: all .2s ease-in-out;
+}
+
+.menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .0s ease-in-out;
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 5vmin;
+        margin-bottom: 4vmin;
+    }
+    button {
+        border: 0;
+        background: #e76c6c;
+        padding: 1vmin 2vmin;
+        font-size: 2.5vmin;
+        border-radius: 2vmin;
+        box-shadow: .5vmin .5vmin 0 0 #000;
+        pointer-events: none;
+        cursor: pointer;
+        transition: all .23s ease-in-out;
+        &:hover {
+            background: #ed8383;
+        }
+    }
+}
+.menu.act {
+    pointer-events: all;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    button {
+        pointer-events: all;
+    }
+}
