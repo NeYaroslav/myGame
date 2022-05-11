@@ -1,10 +1,10 @@
-let cardsDOM = document.querySelectorAll(".element")
-let menu = document.querySelector(".menu")
-let button = document.querySelector(".menu button")
-let counter = 0
-let activeCards = []
-win = 0
-getPOsition()
+let cardsDOM = document.querySelectorAll(".element");
+let menu = document.querySelector(".menu");
+let button = document.querySelector(".menu button");
+let counter = 0;
+let activeCards = [];
+let win = 0;
+getPOsition();
 
 button.addEventListener('click', ()=> {
     cardsDOM.forEach(element => {
@@ -16,7 +16,7 @@ button.addEventListener('click', ()=> {
 
 cardsDOM.forEach((element, index) => {
     element.addEventListener('click', ()=> {
-       if((counter < 2) && (!element.classList.contains('act'))){
+       if((counter < 2) && (!element.classList.contains('act') && !element.classList.contains('hiden'))){
            counter++
            element.classList.add('act')
        }
@@ -28,7 +28,7 @@ cardsDOM.forEach((element, index) => {
                 menu.classList.add('act')
                 win = 0
                }
-           }, 1000);
+           }, 800);
        }
        function getActiveCards(){
            let currentCounter = 0;

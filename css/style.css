@@ -19,6 +19,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -54,8 +55,8 @@ body {
 }
 
 .element.hiden {
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .1s;
+  transition: .1s;
   -webkit-transform: scale(0);
           transform: scale(0);
   opacity: 0;
@@ -67,17 +68,17 @@ body {
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
   z-index: 2;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .element__back {
   background: #e76c6c;
   z-index: 1;
-  -webkit-transition: -webkit-transform .2s ease-in-out .2s;
-  transition: -webkit-transform .2s ease-in-out .2s;
-  transition: transform .2s ease-in-out .2s;
-  transition: transform .2s ease-in-out .2s, -webkit-transform .2s ease-in-out .2s;
+  -webkit-transition: -webkit-transform .1s ease-in-out .1s;
+  transition: -webkit-transform .1s ease-in-out .1s;
+  transition: transform .1s ease-in-out .1s;
+  transition: transform .1s ease-in-out .1s, -webkit-transform .1s ease-in-out .1s;
   border: .5vmin outset #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,20 +91,22 @@ body {
           align-items: center;
   font-size: 15vmin;
   cursor: pointer;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fff;
 }
 
 .element.act .element__front {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
-  -webkit-transition: all .2s ease-in-out .2s;
-  transition: all .2s ease-in-out .2s;
+  -webkit-transition: all .1s ease-in-out .1s;
+  transition: all .1s ease-in-out .1s;
 }
 
 .element.act .element__back {
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .menu {
@@ -132,17 +135,19 @@ body {
 }
 
 .menu h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 5vmin;
-  margin-bottom: 4vmin;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .menu button {
   border: 0;
   background: #e76c6c;
-  padding: 1vmin 2vmin;
-  font-size: 2.5vmin;
+  padding: 2vmin 4vmin;
+  font-size: 20px;
   border-radius: 2vmin;
+  color: #fff;
   -webkit-box-shadow: .5vmin .5vmin 0 0 #000;
           box-shadow: .5vmin .5vmin 0 0 #000;
   pointer-events: none;

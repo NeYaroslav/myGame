@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -46,8 +47,8 @@ body {
         border-radius: 4vmin;
     }
 }
-.element.hiden {
-    transition: .2s;
+.element.hiden{
+    transition: .1s;
     transform: scale(0);
     opacity: 0;
 }
@@ -56,13 +57,13 @@ body {
     background: #fff701;
     transform: scale(0, 1);
     z-index: 2;
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 .element__back {
     background: #e76c6c;
     z-index: 1;
-    transition: transform .2s ease-in-out .2s;
+    transition: transform .1s ease-in-out .1s;
     border: .5vmin outset #fff;
     // box-shadow: 5px 5px 0 0 #;
     display: flex;
@@ -70,14 +71,16 @@ body {
     align-items: center;
     font-size: 15vmin;
     cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
 }
 .element.act .element__front {
     transform: scale(1, 1);
-    transition: all .2s ease-in-out .2s;
+    transition: all .1s ease-in-out .1s;
 }
 .element.act .element__back {
     transform: scale(0, 1);
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 .menu {
@@ -94,16 +97,18 @@ body {
     opacity: 0;
     transition: opacity .0s ease-in-out;
     h1 {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 5vmin;
-        margin-bottom: 4vmin;
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        text-align: center;
     }
     button {
         border: 0;
         background: #e76c6c;
-        padding: 1vmin 2vmin;
-        font-size: 2.5vmin;
+        padding: 2vmin 4vmin;
+        font-size: 20px;
         border-radius: 2vmin;
+        color: #fff;
         box-shadow: .5vmin .5vmin 0 0 #000;
         pointer-events: none;
         cursor: pointer;
