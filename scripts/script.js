@@ -10,6 +10,7 @@ button.addEventListener('click', ()=> {
     cardsDOM.forEach(element => {
         element.classList.remove('hiden')
     });
+    getPOsition();
     menu.classList.remove('act')
 })
 
